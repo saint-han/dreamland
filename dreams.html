@@ -1,0 +1,170 @@
+<!DOCTYPE.html>
+	<html>
+		<head>
+			<link rel="stylesheet" type="text/css" href="dreams.css" />
+			<script type="text/javascript" src="/js/dreams.js"></script>
+			<title>DREAMLAND</title>
+		</head>
+			<style type="text/css">
+<!--
+.bgclr {background-color: white; color: black; font-weight: bold;}
+-->
+</style>
+
+<script language="JavaScript">
+
+<!-- Begin
+// Insert number of questions
+var numQues = 10;
+
+// Insert number of choices in each question
+var numChoi = 4;
+
+// Insert number of questions displayed in answer area
+var answers = new Array(10);
+
+// Insert answers to questions
+answers[0] = "Watch a movie with wife/husband and kids";
+answers[1] = "a high-end luxury watch, say a Rolex";
+answers[2] = "White";
+answers[3] = "Warm and Sunny";
+answers[4] = "Spend it at a luxury spa resort";
+answers[5] = "Tea";
+answers[6] = "Quiet";
+answers[7] = "Yes, I am a brave guy/woman";
+answers[8] = "Dog";
+answers[9] = "Hills/Mountains";
+
+// Do not change anything below here ...
+function getScore(form) {
+var score = 0;
+var currElt;
+var currSelection;
+for (i=0; i<numQues; i++) {
+currElt = i*numChoi;
+for (j=0; j<numChoi; j++) {
+currSelection = form.elements[currElt + j];
+if (currSelection.checked) {
+if (currSelection.value == answers[i]) {
+  score++;
+  break;
+}
+}
+}
+}
+score = Math.round(score/numQues*100);
+form.percentage.value = score + "%";
+var correctAnswers = "";
+for (i=1; i<=numQues; i++) {
+correctAnswers += i + ". " + answers[i-1] + "\r\n";
+}
+form.solutions.value = correctAnswers;
+}
+//  End -->
+</script>
+
+
+		<body>
+			<form name="question" onSubmit="return reportValue(this)">
+			<p class="question">1. Given the following options, which one would you most prefer to do on a sunday afternoon?</p>        
+
+				<ul>            
+					<input type="radio" name="q1" value="Watch a movie with wife/husband and kids">Watch a movie with wife/husband and kids<br/>          
+					<input type="radio" name="q1" value="Spend time working for a NGO, teaching slum kids">Spend time working for a NGO, teaching slum kids<br/>            
+					<input type="radio" name="q1" value="Laze around at home, take a nap, have a beer">Laze around at home, take a nap, have a beer<br/>            
+					<input type="radio" name="q1" value="Go watch a cricket/football/sports match with friends">Go watch a cricket/football/sports match with friends<br/>       
+				</ul>        
+
+
+			<p class="question">2. For your next birthday, which one of these gifts would you most want to receive?</p>        
+
+					<ul>            
+					<input type="radio" name="q2" value="a high-end luxury watch, say a Rolex">a high-end luxury watch, say a Rolex<br/>           
+					<input type="radio" name="q2" value="an all paid dream 6 month long holiday package">an all paid dream 6 month long holiday package<br/>            
+					<input type="radio" name="q2" value="a prized but lost family heirloom" id="q2c">a prized but lost family heirloom<br/>           
+					<input type="radio" name="q2" value="a rare piece of antique / collectors item" id="q2d">a rare piece of antique / collectors item<br/>       
+				</ul>        
+
+			<p class="question">3. What is your favourite colour?</p>        
+
+				<ul>            
+					<input type="radio" name="q3" value="White">White<br/>            
+					<input type="radio" name="q3" value="Black" id="q3b">Black<br/>            
+					<input type="radio" name="q3" value="Red" id="q3c">Red<br/>           
+					<input type="radio" name="q3" value="Blue" id="q3d">Blue<br/>       
+				</ul>        
+
+			<p class="question">4. Which one of these outdoor settings do you like most?</p>        
+
+				<ul>           
+					<input type="radio" name="q4" value="Hills/Mountains" id="q4a">Hills/Mountains<br/>            
+					<input type="radio" name="q4" value="Seaside/Beach" id="q4b">Seaside/Beach<br/>            
+					<input type="radio" name="q4" value="Lakeside" id="q4c">Lakeside<br/>            
+					<input type="radio" name="q4" value="Club" id="q4d">Club<br/>        
+				</ul>        
+
+			<p class="question">5. What climate do you find most comfortable?</p>        
+
+				<ul>            
+					<input type="radio" name="q5" value="Warm and Sunny" id="q5a">Warm and Sunny<br/>            
+					<input type="radio" name="q5" value="Cold, but not too wet" id="q5b">Cold, but not too wet<br/>            
+					<input type="radio" name="q5" value="I love rains" id="q5c">I love rains<br/>           
+					<input type="radio" name="q5" value="Snow" id="q5d">Snow<br/>        
+					</ul>        
+
+			<p class="question">6. If you had 1000 dollars to blow-up, which would you choose?</p>        
+
+				<ul>            
+					<input type="radio" name="q6" value="Spend it at a luxury spa resort">Spend it at a luxury spa resort<br/>            
+					<input type="radio" name="q6" value="Partying with friends at the swankiest new nightclub">Partying with friends at the swankiest new nightclub<br/>            
+					<input type="radio" name="q6" value="flirt around with ladies">flirt around with ladies<br/>            
+					<input type="radio" name="q6" value="Give donations">Give donations<br/>        
+				</ul>       
+
+			<p class="question">7. Among the following, which drink do you love best?</p>        
+
+				<ul>            
+					<input type="radio" name="q7" value="Tea">Tea<br/>            
+					<input type="radio" name="q7" value="Rum and Coke">Rum and Coke<br/>            
+					<input type="radio" name="q7" value="Beer">Beer<br/>            
+					<input type="radio" name="q7" value="Coffee">Coffee<br/>        
+				</ul>        
+
+			<p class="question">8. Do you prefer it quiet, or would you rather have some noise?</p>        
+
+				<ul>            
+					<input type="radio" name="q8" value="Quiet">Quiet<br/>            
+					<input type="radio" name="q8" value="Give me some noise">Give me some noise<br/>            
+					<input type="radio" name="q8" value="i'm okay with both">i'm okay with both<br/>            
+					<input type="radio" name="q8" value="not sure">not sure<br/>       
+				</ul>        
+
+			<p class="question">9. Are you genuinely not afraid of anything or any situation?</p>        
+
+				<ul>            
+					<input type="radio" name="q9" value="Yes, I am a brave guy/woman">Yes, I am a brave guy/woman<br/>            
+					<input type="radio" name="q9" value="No, I don’t claim any such bravado">No, I don’t claim any such bravado<br/>            
+					<input type="radio" name="q9" value="I dont know">I dont know<br/>            
+					<input type="radio" name="q9" value="None">None<br/>        
+				</ul>        
+
+			<p class="question">10. Which one of these animals would you most love to have as a pet?</p>        
+
+				<ul>           
+					<input type="radio" name="q10" value="Dog">Dog<br/>            
+					<input type="radio" name="q10" value="Tiger">Tiger<br/>            
+					<input type="radio" name="q10" value="Cat">Cat<br/>            
+					<input type="radio" name="q10" value="Parrot">Parrot<br/>        
+				</ul>        
+
+					<br/>
+			<input type="button" value="Get score" onClick="getScore(this.form)"/>
+				<p> Score = <strong><input class="bgclr" type="text" size="5" name="percentage"  
+				disabled="disabled"/></strong><br/><br/>
+				
+			</textarea>
+				</p>
+			</form>
+	
+		</body>
+	</html>			
